@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cadastro - Freela Home</title>
 </head>
 <body>
 
- <header>
+    <header>
         <img src="assets/images/logo.png" alt="Logo Freela Home">
-        <h1>Smart Control - Portal de Cadastro</h1>
+        <h1>Freela Home - Portal de Cadastro</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Voltar ao Login</a></li>
@@ -17,10 +17,12 @@
             </ul>
         </nav>
     </header>
+
     <main>
+
         <section id="opcao-cadastro">
             <h2>Opção de Cadastro</h2>
-            <form>
+            <form method="get">
                 <fieldset>
                     <legend>Selecione o tipo de conta</legend>
                     
@@ -31,12 +33,13 @@
                     <label for="cliente">Cliente</label>
                 </fieldset>
             </form>
-        </section>  
+        </section>
+
         <hr>
 
         <section id="cadastro-trabalhador">
             <h2>Cadastro de Trabalhador</h2>
-            <form action="#" method="post">
+            <form method="get">
                 <p>
                     <label for="trabalhador-nome">Nome completo:</label><br>
                     <input type="text" id="trabalhador-nome" name="nome" required>
@@ -98,16 +101,16 @@
 
                 <p>
                     <button type="reset">Cancelar</button>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" formaction="dashboard.html">Cadastrar</button>
                 </p>
             </form>
         </section>
 
         <hr>
 
-   <section id="cadastro-cliente">
+        <section id="cadastro-cliente">
             <h2>Cadastro de Cliente</h2>
-            <form action="#" method="post">
+            <form method="get">
                 <p>
                     <label for="cliente-nome">Nome completo:</label><br>
                     <input type="text" id="cliente-nome" name="nome" required>
@@ -158,12 +161,13 @@
 
                 <p>
                     <button type="reset">Cancelar</button>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" formaction="dashboard.html">Cadastrar</button>
                 </p>
             </form>
         </section>
 
     </main>
+
     <footer>
         <hr>
         <h3>Localização da Sede (Freela Home)</h3>
@@ -175,11 +179,9 @@
             allowfullscreen="" 
             loading="lazy" 
             referrerpolicy="no-referrer-when-downgrade"
-            title="Mapa fictício da sede">
+            title="Mapa fictício da sede da empresa">
         </iframe>
     </footer>
 
 </body>
-</html>     
-    
-
+</html>
