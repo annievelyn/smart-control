@@ -19,7 +19,7 @@ body {
   border-radius: 6px;
   width: 320px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .login-card h2 {
@@ -63,7 +63,7 @@ body {
 }
 
 .input-group input::placeholder {
-  color: #d1c9d6;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .button-group {
@@ -78,11 +78,13 @@ body {
   padding: 8px 0;
   border-radius: 20px;
   font-size: 13px;
+  font-weight: bold;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   text-align: center;
   transition: all 0.3s ease;
+  border: none;
 }
 
 .btn-cancelar {
@@ -93,7 +95,6 @@ body {
 
 .btn-entrar {
   background-color: #a8d5cb;
-  border: 1px solid #a8d5cb;
   color: #ffffff;
 }
 
@@ -105,7 +106,6 @@ body {
 
 .btn-entrar:hover {
   background-color: #8ec3b8;
-  border-color: #8ec3b8;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
   transform: translateY(-1px);
 }
