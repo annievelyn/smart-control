@@ -1,129 +1,151 @@
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #d8dec9;
+  background-color: #e5e5e5;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
+
 
 .login-card {
-  background-color: #6b6375;
-  padding: 30px;
-  border-radius: 6px;
+  background-color: #706880;
   width: 320px;
+  padding: 35px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
 }
 
-.login-card h2 {
-  color: #ffffff;
+
+.title {
+  font-size: 28px;
   font-weight: normal;
-  font-size: 24px;
   margin-bottom: 15px;
 }
 
-.user-icon {
+
+.avatar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.avatar-icon {
   width: 55px;
   height: 55px;
-  background-color: #a8d5cb;
   border-radius: 50%;
-  margin: 0 auto 20px auto;
+  background-color: #a8d5cb;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid #333;
 }
 
-.user-icon svg {
+.avatar-icon svg {
   width: 32px;
   height: 32px;
-  fill: #2c3e35;
+  stroke: #2a3d38;
 }
 
+
 .input-group {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .input-group input {
   width: 100%;
-  padding: 10px 12px;
-  background-color: #534559;
+  padding: 10px 14px;
+  border-radius: 6px;
   border: none;
-  border-radius: 3px;
+  background-color: #5c415d;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   outline: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .input-group input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: #d1cbd5;
 }
+
+.input-group input:focus {
+  background-color: #4a344b;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
 
 .button-group {
   display: flex;
-  gap: 12px;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  margin-bottom: 20px;
 }
 
 .btn {
   flex: 1;
-  padding: 8px 0;
+  padding: 10px 0;
   border-radius: 20px;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 14px;
   cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  text-align: center;
   transition: all 0.3s ease;
-  border: none;
 }
 
+
 .btn-cancelar {
-  background-color: transparent;
-  border: 1px solid #ffffff;
+  background: transparent;
   color: #ffffff;
+  border: 1px dashed #ffffff;
 }
+
+.btn-cancelar:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 .btn-entrar {
   background-color: #a8d5cb;
   color: #ffffff;
-}
-
-.btn-cancelar:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transform: translateY(-1px);
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .btn-entrar:hover {
-  background-color: #8ec3b8;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  background-color: #8cc4b8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transform: translateY(-1px);
 }
 
-.links-container {
+.btn-entrar:active {
+  transform: translateY(0);
+}
+
+
+.extra-links {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
 
-.links-container a {
+.link {
   color: #ffffff;
   text-decoration: none;
-  font-size: 12px;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+  font-size: 13px;
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
-.links-container a:hover {
-  color: #a8d5cb;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+.link:hover {
+  color: #d8f3ec;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  text-decoration: underline;
 }
