@@ -22,34 +22,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.top-header {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.logo {
+    max-height: 45px;
+    object-fit: contain;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 360px;
+    padding: 0 10px;
+}
+
+.main-title {
+    color: #333333;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .login-card {
     background-color: #8c8ca3;
     width: 100%;
-    max-width: 340px;
     padding: 35px 30px;
     text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .login-card h2 {
     color: #ffffff;
     font-size: 28px;
     font-weight: normal;
-    margin-bottom: 15px;
-}
-
-.profile-icon {
-    width: 65px;
-    height: 65px;
-    background-color: #a3c2c2;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto 25px auto;
-    border: 1px solid #738a8a;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 form p {
@@ -60,12 +79,22 @@ input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
-    padding: 10px 12px;
+    padding: 12px 14px;
     background-color: #705579;
     border: none;
+    border-radius: 4px;
     color: #ffffff;
     font-size: 13px;
     outline: none;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    background-color: #7e6088;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.3), 0 0 5px rgba(255, 255, 255, 0.4);
 }
 
 input::placeholder {
@@ -84,13 +113,21 @@ button {
     flex: 1;
     padding: 10px;
     font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
     border-radius: 20px;
-    transition: opacity 0.2s;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
 }
 
 button:hover {
-    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #cancelar {
@@ -108,15 +145,18 @@ button:hover {
 .links-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
 }
 
 .links-group a {
     color: #ffffff;
     text-decoration: none;
     font-size: 13px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.2s;
 }
 
 .links-group a:hover {
     text-decoration: underline;
+    color: #e0e0e0;
 }
