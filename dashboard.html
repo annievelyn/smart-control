@@ -3,36 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Smart Control</title>
+    <link rel="stylesheet" href="dashboard.style.css">
 </head>
 <body>
-    <nav> 
-        <ul>
-            <li><a href="">Conta</a></li>
-            <li><a href="">Configurações</a></li>
-            <li><a href="">Histórico</a></li>
-            <li><a href="index.html">Sair</a></li>
-        </ul>
-    </nav>
 
-    <heater><h1>Logo</h1></heater>
+    <header class="header-principal">
+        <div class="logo">
+            <h1>FreelaHome</h1>
+        </div>
+        <nav class="menu-nav"> 
+            <ul>
+                <li><a href="#">Conta</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="#">Histórico</a></li>
+                <li><a href="index.html">Sair</a></li>
+            </ul>
+        </nav>
+    </header>
 
-   <main>
-       <input type="text" placeholder="Pesquisar">
-       <section class="botao-profissao"><button>Pintor</button></section>
-       <section class="botao-profissao"><button>Encanador</button></section>
-       <section class="botao-profissao"><button>Eletricista</button></section>
-       <section class="botao-profissao"><button>Mecânico</button></section>
-       <section class="botao-profissao"><button>Manicure</button></section>
-       <section class="botao-profissao"><button>Maquiadora</button></section>
-       <section class="botao-profissao"><button>Cabeleireiro</button></section>
-       <section class="botao-profissao"><button>Costureiro</button></section>
-       <section class="botao-profissao"><button>Jardiniero</button></section>
-       <section class="botao-profissao"><button>Pedreiro</button></section>
-       <section class="botao-profissao"><button>Lash Designer</button></section>
+    <main class="main-container">
+        
+        <section class="metricas-container">
+            <div class="card-metrica">
+                <span class="badge badge-sucesso">Ativo</span>
+                <h3>Usuários Ativos</h3>
+                <p class="numero">1.240</p>
+            </div>
+            <div class="card-metrica">
+                <span class="badge badge-alerta">3 Alertas</span>
+                <h3>Notificações</h3>
+                <p class="numero">15</p>
+            </div>
+            <div class="card-metrica">
+                <span class="badge badge-info">Atualizado</span>
+                <h3>Acessos Hoje</h3>
+                <p class="numero">450</p>
+            </div>
+        </section>
 
+        <section class="relatorio-acessos">
+            <h2>Relatório de Acessos Recentes</h2>
+            <table class="tabela-acessos">
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Data/Hora</th>
+                        <th>Ação</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Felipe Smith</td>
+                        <td>10/08/2026 - 14:32</td>
+                        <td>Login no sistema</td>
+                        <td><span class="status-sucesso">Sucesso</span></td>
+                    </tr>
+                    <tr>
+                        <td>Galo Cego</td>
+                        <td>10/08/2026 - 13:15</td>
+                        <td>Busca por Eletricista</td>
+                        <td><span class="status-sucesso">Sucesso</span></td>
+                    </tr>
+                    <tr>
+                        <td>Zé da Manga</td>
+                        <td>10/08/2026 - 11:05</td>
+                        <td>Tentativa de Acesso</td>
+                        <td><span class="status-sucesso">Sucesso</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="busca-box">
+            <input type="text" placeholder="filtro de serviços">
+        </div>
+
+        <section class="grid-profissoes">
+            <button class="card-profissao">
+                <img src="eletricista.png" alt="Eletricista">
+                <span>Eletricista</span>
+            </button>
+            <button class="card-profissao">
+                <img src="encanador.png" alt="Encanador">
+                <span>Encanador</span>
+            </button>
+            <button class="card-profissao">
+                <img src="manicure.png" alt="Manicure">
+                <span>Manicure</span>
+            </button>
+            <button class="card-profissao">
+                <img src="maquiador.png" alt="Maquiador">
+                <span>Maquiador</span>
+            </button>
+            <button class="card-profissao">
+                <img src="massagista.png" alt="Massagista">
+                <span>Massagista</span>
+            </button>
+            <button class="card-profissao">
+                <img src="pedreiro.png" alt="Pedreiro">
+                <span>Pedreiro</span>
+            </button>
+            <button class="card-profissao">
+                <img src="jardineiro.png" alt="Cartomante">
+                <span>Cartomante</span>
+            </button>
+            <button class="card-profissao">
+                <img src="programador.png" alt="Programador">
+                <span>Programador</span>
+            </button>
+            <button class="card-profissao">
+                <img src="pintor.png" alt="Pintor">
+                <span>Pintor</span>
+            </button>
+            <button class="card-profissao">
+                <img src="mecanico.png" alt="Mecânico">
+                <span>Mecânico</span>
+            </button>
+            <button class="card-profissao">
+                <img src="motorista.png" alt="Motorista">
+                <span>Motorista</span>
+            </button>
+            <button class="card-profissao">
+                <img src="costureiro.png" alt="Costureiro">
+                <span>Costureiro</span>
+            </button>
+        </section>
 
     </main>
-    
+
 </body>
 </html>
