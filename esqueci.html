@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha - Freela Home</title>
+    <!-- 1. Link para o arquivo CSS (vamos chamá-lo de esqueci.style.css) -->
+    <link rel="stylesheet" href="esqueci.style.css">
 </head>
 <body>
-
-    <header>
-        <img src="assets/images/logo.png" alt="Logo Freela Home">
-        <h1>Freela Home - Recuperação de Senha</h1>
-        <nav>
+    <header class="header-principal">
+        <!-- 2. Logo container para alinhamento -->
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="Logo Freela Home" class="logo-img">
+            <h1>Freela Home</h1>
+        </div>
+        <nav class="menu-nav">
             <ul>
                 <li><a href="index.html">Voltar ao Login</a></li>
             </ul>
         </nav>
     </header>
-
-    <main>
+    <main class="main-container">
         <section id="recuperar-senha">
             <h2>Redefinir sua senha</h2>
             <p>Informe o e-mail cadastrado para receber as instruções de redefinição.</p>
@@ -28,15 +31,15 @@
                     <input type="email" id="email-recuperacao" name="email" required>
                 </p>
 
-                <p>
-                    <button type="reset">Cancelar</button>
-                    <button type="submit" formaction="index.html">Enviar Instruções</button>
+                <p class="botoes-p">
+                    <!-- 3. Classes nos botões para estilização -->
+                    <button type="reset" class="btn-cancelar">Cancelar</button>
+                    <button type="submit" formaction="index.html" class="btn-enviar">Enviar Instruções</button>
                 </p>
             </form>
         </section>
     </main>
-
-    <footer>
+    <footer class="footer-principal">
         <hr>
         <p>&copy; 2026 Freela Home - Todos os direitos reservados.</p>
     </footer>
