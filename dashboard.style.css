@@ -26,10 +26,21 @@ header.header-principal {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.header-principal .logo h1 {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container h1 {
     font-size: 1.4rem;
 }
 
+.logo-container .logo-img {
+    width: 40px; 
+    height: 40px; 
+    object-fit: contain; 
+    margin-right: 10px; 
+}
 .header-principal nav ul {
     display: flex;
     list-style: none;
