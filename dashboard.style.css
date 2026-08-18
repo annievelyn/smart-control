@@ -24,7 +24,6 @@ header.header-principal {
   padding: 10px 20px;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  flex-wrap: wrap;
 }
 
 .logo-container {
@@ -43,11 +42,15 @@ header.header-principal {
   margin-right: 10px; 
 }
 
+.menu-nav {
+  display: flex;
+  align-items: center;
+}
+
 .header-principal nav ul {
   display: flex;
   list-style: none;
   gap: 15px;
-  flex-wrap: wrap;
 }
 
 .header-principal nav a {
@@ -58,6 +61,28 @@ header.header-principal {
 
 .header-principal nav a:hover {
   text-decoration: underline;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
 main.main-container {
@@ -143,8 +168,8 @@ main.main-container {
   background-color: #f4f4f4;
 }
 
-.status-sucesso { color: #28a745; font-weight: bold; }
-.status-erro { color: #dc3545; font-weight: bold; }
+.status-ativo { color: #28a745; font-weight: bold; }
+.status-inativo { color: #dc3545; font-weight: bold; }
 
 .busca-box {
   margin-bottom: 25px;
@@ -207,14 +232,43 @@ main.main-container {
   background-color: #817a9c;
 }
 
-@media (max-width: 600px) {
-  header.header-principal {
-    position: relative;
-    justify-content: center;
-    text-align: center;
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
   }
 
-  main.main-container {
-    padding-top: 20px;
+  .menu-nav ul {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #6a527a;
+    width: 100%;
+    max-width: 180px;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    box-shadow: -2px 5px 10px rgba(0,0,0,0.2);
+    border-bottom-left-radius: 8px;
+    display: none;
+  }
+
+  .menu-nav ul li {
+    text-align: right;
+  }
+
+  #menu-toggle:checked ~ ul {
+    display: flex;
+  }
+
+  #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+  }
+
+  #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 }
