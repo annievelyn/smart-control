@@ -172,7 +172,6 @@ body {
   opacity: 0.8;
 }
 
-/* Media Query para Celulares */
 @media (max-width: 480px) {
   .header-principal {
     justify-content: center;
