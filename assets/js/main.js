@@ -30,8 +30,6 @@ const formatarDataAtual = () => {
 
 const exibirSaudacaoBoasVindas = () => {
   const elementoSaudacao = document.querySelector('#saudacao');
-
-  // O script só executa o prompt se o elemento #saudacao existir na página atual (Dashboard)
   if (elementoSaudacao) {
     let usuario = prompt('Por favor, informe seu nome completo:');
 
