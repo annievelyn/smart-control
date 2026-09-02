@@ -15,16 +15,17 @@
         </div>
         <nav class="menu-nav"> 
             <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">
+            <label for="menu-toggle" class="menu-icon" id="btnMenuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </label>
-            <ul>
+            <ul id="menuList">
                 <li><a href="#">Conta</a></li>
                 <li><a href="#">Configurações</a></li>
                 <li><a href="#">Histórico</a></li>
                 <li><a href="index.html">Sair</a></li>
+                <li><button id="btnTema" type="button">Alternar Tema</button></li>
             </ul>
         </nav>
     </header>
@@ -51,6 +52,10 @@
             </div>
         </section>
 
+        <div class="busca-box">
+            <input type="text" id="campoBusca" placeholder="🔍 filtro de serviços ou nomes">
+        </div>
+
         <section class="relatorio-acessos">
             <h2>Relatório de Acessos Recentes</h2>
             <table class="tabela-acessos">
@@ -62,7 +67,7 @@
                         <th>Status</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tabelaCorpo">
                     <tr>
                         <td>Galo Cego</td>
                         <td>04/08/2026</td>
@@ -84,10 +89,6 @@
                 </tbody>
             </table>
         </section>
-
-        <div class="busca-box">
-            <input type="text" placeholder="🔍 filtro de serviços">
-        </div>
 
         <section class="grid-profissoes">
             <button class="card-profissao">

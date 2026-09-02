@@ -30,6 +30,7 @@ const formatarDataAtual = () => {
 
 const exibirSaudacaoBoasVindas = () => {
   const elementoSaudacao = document.querySelector('#saudacao');
+
   if (elementoSaudacao) {
     let usuario = prompt('Por favor, informe seu nome completo:');
 
@@ -41,8 +42,69 @@ const exibirSaudacaoBoasVindas = () => {
     const mensagem = `Olá, ${usuario.trim()}! Hoje é ${dataAtual}`;
 
     elementoSaudacao.textContent = mensagem;
-    console.log('Mensagem gerada:', mensagem);
+  }
+};
+
+const inicializarBuscaEmTempoReal = () => {
+  const campoBusca = document.querySelector('#campoBusca');
+  const linhasTabela = document.querySelectorAll('#tabelaCorpo tr');
+  const cardsProfissao = document.querySelectorAll('.card-profissao');
+
+  if (campoBusca) {
+    campoBusca.addEventListener('input', (event) => {
+      const termoBusca = event.target.value.toLowerCase().trim();
+
+      linhasTabela.forEach((linha) => {
+        const textoLinha = linha.textContent.toLowerCase();
+        if (textoLinha.includes(termoBusca)) {
+          linha.style.display = '';
+        } else {
+          linha.style.display = 'none';
+        }
+      });
+
+      cardsProfissao.forEach((card) => {
+        const textoCard = card.textContent.toLowerCase();
+        if (textoCard.includes(termoBusca)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  }
+};
+
+const inicializarAlternanciaTema = () => {
+  const btnTema = document.querySelector('#btnTema');
+
+  if (btnTema) {
+    btnTema.textContent = document.body.classList.contains('dark-theme') ? 'Modo Claro' : 'Modo Escuro';
+
+    btnTema.addEventListener('click', () => {
+      document.body.classList.toggle('dark-theme');
+
+      if (document.body.classList.contains('dark-theme')) {
+        btnTema.textContent = 'Modo Claro';
+      } else {
+        btnTema.textContent = 'Modo Escuro';
+      }
+    });
+  }
+};
+
+const inicializarMenuMobile = () => {
+  const btnMenu = document.querySelector('#btnMenuToggle');
+  const menuList = document.querySelector('#menuList');
+
+  if (btnMenu && menuList) {
+    btnMenu.addEventListener('click', () => {
+      menuList.classList.toggle('active');
+    });
   }
 };
 
 exibirSaudacaoBoasVindas();
+inicializarBuscaEmTempoReal();
+inicializarAlternanciaTema();
+inicializarMenuMobile();  
